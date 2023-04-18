@@ -12,7 +12,6 @@
     "@headlessui/react": "^1.7.7",
     "@headlessui/tailwindcss": "^0.1.2",
     "@heroicons/react": "^2.0.13",
-    "@next/font": "13.3.0",
     "@sanity/client": "^4.0.1",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
