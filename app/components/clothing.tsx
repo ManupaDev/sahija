@@ -1,5 +1,3 @@
-"use client";
-
 import { ClothingType } from "../page";
 
 function Clothing({
