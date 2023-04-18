@@ -2,8 +2,8 @@ import client from "@/lib/sanity";
 
 async function SubCategoryPage({ params }: { params: { category: string; subcategory: string } }) {
   const { category, subcategory } = params;
-  // const query = `*[_type == "clothing" && category == "${category}" && clothType == "${subcategory}" ] {id,name,category,clothType,price,quantity}`;
-  // const data = await client.fetch(query)
+  const query = `*[_type == "clothing" && category == "${category}" && clothType == "${subcategory}" ] {id,name,category,clothType,price,quantity}`;
+  const data = await client.fetch(query)
   
 
   return (

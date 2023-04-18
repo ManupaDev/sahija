@@ -12,25 +12,27 @@ function Navigation() {
   };
 
   return (
-    <div className="flex justify-between py-1 px-4 border border-black relative">
+    <div className="flex justify-between py-1 px-4 border items-center border-black relative">
       <div></div>
-      <div className="flex">
-        <Link href={"/signup"} className="text-xs border block border-black px-1 py-1 rounded">
+      <div className="flex items-center">
+        <Link href={"/signup"} className="text-base border block border-black px-1 py-1 rounded">
           Sign Up
         </Link>
+        
         <Hamburger onClick={onHamburgerClick} isOpen={isOpen} />    
+        
         <div
-          className={clsx("absolute border border-black top-9 right-4 px-4 rounded flex flex-col bg-slate-2`00", {
+          className={clsx("absolute border border-black top-11 right-4 px-4 rounded flex flex-col bg-slate-2`00", {
             hidden: !isOpen,
           })}
         >
-          <Link href={"/"} className="block text-right py-2 font-semibold text-xs" onClick={()=>{setIsOpen(!isOpen)}}>
+          <Link href={"/"} className="block text-right py-2 font-semibold text-base" onClick={()=>{setIsOpen(!isOpen)}}>
             Home
           </Link>
-          <Link href={"/shop/clothing"} className="block text-right py-2 font-semibold text-xs" onClick={()=>{setIsOpen(!isOpen)}}>
+          <Link href={"/shop/clothing"} className="block text-right py-2 font-semibold text-base" onClick={()=>{setIsOpen(!isOpen)}}>
             Shop
           </Link>
-          <Link href={"/help"} className="block text-right py-2 font-semibold text-xs" onClick={()=>{setIsOpen(!isOpen)}}>
+          <Link href={"/help"} className="block text-right py-2 font-semibold text-base" onClick={()=>{setIsOpen(!isOpen)}}>
             Help
           </Link>
         </div>
@@ -43,8 +45,8 @@ export default Navigation;
 
 function Hamburger({ onClick, isOpen }: { onClick: () => void; isOpen: boolean }) {
   if (!isOpen) {
-    return <Bars3Icon width={24} height={24} className="ml-4 cursor-pointer" onClick={onClick} />;
+    return <Bars3Icon width={30} height={30} className="ml-4 cursor-pointer" onClick={onClick} />;
   } else {
-    return <XMarkIcon width={24} height={24} className="ml-4 cursor-pointer" onClick={onClick} />;
+    return <XMarkIcon width={30} height={30} className="ml-4 cursor-pointer" onClick={onClick} />;
   }
 }

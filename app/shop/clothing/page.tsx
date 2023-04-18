@@ -5,7 +5,7 @@ async function ClothingShop({ params }: { params: { category: string } }) {
   
   const query = `*[_type == "clothing"] {id,name,price,quantity}`;
   const data = await client.fetch(query);
-  // console.log(data);
+  console.log(data);
   
   return (
     <div className="border border-black px-4 py-4">
